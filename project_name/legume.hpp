@@ -2,6 +2,7 @@
 #define _Legume_hpp
 
 # include "plante.hpp"
+#include <string.h>
 
 using namespace std ;
 
@@ -25,7 +26,3 @@ public:
 
 #endif
 
-
-
-
-#endif

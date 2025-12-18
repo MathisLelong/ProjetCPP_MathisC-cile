@@ -7,7 +7,7 @@ class Plante {
 
 protected :
 
-  static int Compteur
+  static int Compteur;
 
   public :
 

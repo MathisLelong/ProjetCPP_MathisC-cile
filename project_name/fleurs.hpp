@@ -2,6 +2,7 @@
 #define _fleurs_hpp
 
 #include "plante.hpp"
+#include <string.h>
 
 using namespace std;
 
