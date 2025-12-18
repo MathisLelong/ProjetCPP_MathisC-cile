@@ -8,6 +8,7 @@ class Plante {
 protected :
 
   static int Compteur;
+  static int point_de_vie; 
 
   public :
 

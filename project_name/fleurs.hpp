@@ -11,11 +11,14 @@ class Fleurs: public Plante{
 protected :
 
   string nom;
-
+  string couleur;  
+ 
 public :
-  Fleurs(string nom);
-  virtual void Caracteristiques();
 
+  Fleurs(string nom, string couleur);
+
+  virtual void Caracteristiques();
+ 
   ~Fleurs(); 
 
 };

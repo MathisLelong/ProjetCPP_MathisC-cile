@@ -4,17 +4,18 @@
 
 using namespace std ;
 
-Fleurs::Fleurs(string n):Plante(){
+Fleurs::Fleurs(string n, string c):Plante(){
 
   printf("Fleur créée");
   nom = n;
+  couleur = c; 
 
 }
 
 void Fleurs::Caracteristiques(){
 
-  cout << nom << endl; 
-
+  cout << nom << couleur << endl; 
+  
 }
 
 Fleurs::~Fleurs(){
