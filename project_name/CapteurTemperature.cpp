@@ -4,9 +4,7 @@
 
 using namespace std ;
 
-CapteurTemperature::CapteurTemperature(){
-
-
+CapteurTemperature::CapteurTemperature(){    
 }
 
 

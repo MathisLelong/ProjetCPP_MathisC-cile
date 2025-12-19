@@ -8,7 +8,6 @@ class CapteurTemperature {
 
     CapteurTemperature(); 
 
-
   ~CapteurTemperature(); 
 
 };
