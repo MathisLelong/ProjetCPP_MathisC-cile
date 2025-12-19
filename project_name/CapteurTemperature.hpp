@@ -1,12 +1,20 @@
 #ifndef _CapteurTemperature_hpp
 #define _CapteurTemperature_hpp
 
+#include "Capteur.hpp"
 
 using namespace std;
 
-class CapteurTemperature {
+class CapteurTemperature : public Capteur {
 
-    CapteurTemperature(); 
+  protected : 
+
+  float Temperature; 
+
+  public : 
+    CapteurTemperature(int b); 
+
+    void AfficheTemperature();
 
   ~CapteurTemperature(); 
 
