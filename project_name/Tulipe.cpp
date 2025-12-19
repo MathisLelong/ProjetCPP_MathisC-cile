@@ -4,16 +4,13 @@
 
 using namespace std ;
 
-Tulipe::Tulipe():Fleurs(nom,couleur){
-
-  printf("Rose créée");
+Tulipe::Tulipe(string c):Fleurs("Tulipe",c){
 
 }
 
 int Tulipe::TempsDePousse(){
-    return 15;
+    return 8;
 }
-
 
 
 int Tulipe::GetPointDeVie(){

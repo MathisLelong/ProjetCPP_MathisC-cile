@@ -12,7 +12,7 @@ protected :
 
 
 public :
-  Tulipe();
+  Tulipe(string c);
 
   virtual int TempsDePousse(); 
 

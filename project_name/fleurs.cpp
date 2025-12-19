@@ -6,7 +6,6 @@ using namespace std ;
 
 Fleurs::Fleurs(string n, string c):Plante(){
 
-  printf("Fleur créée");
   nom = n;
   couleur = c; 
 
@@ -14,7 +13,7 @@ Fleurs::Fleurs(string n, string c):Plante(){
 
 void Fleurs::Caracteristiques(){
 
-  cout << nom << couleur << endl; 
+  cout << nom <<' '<< couleur << endl; 
   
 }
 

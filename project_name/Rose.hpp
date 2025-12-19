@@ -12,7 +12,7 @@ protected :
 
 
 public :
-  Rose();
+  Rose(string c);
 
   virtual int TempsDePousse(); 
 

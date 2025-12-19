@@ -6,9 +6,7 @@ using namespace std ;
 
 Plante::Plante(){
 
-  printf("plante crée");
   Compteur++;
-
 
 }
 

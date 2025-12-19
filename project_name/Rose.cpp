@@ -4,11 +4,11 @@
 
 using namespace std ;
 
-Rose::Rose():Fleurs(nom,couleur){
-
-  printf("Rose créée");
+Rose::Rose(string c):Fleurs("Rose",c){
 
 }
+
+
 
 int Rose::TempsDePousse(){
     return 15;
