@@ -1,10 +1,10 @@
 #ifndef _fleurs_hpp
 #define _fleurs_hpp
-
-#include "plante.hpp"
-#include <string.h>
-
 using namespace std;
+#include "plante.hpp"
+#include <string>
+
+
 
 class Fleurs: public Plante{
 
