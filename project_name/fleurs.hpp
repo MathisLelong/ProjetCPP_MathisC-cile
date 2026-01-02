@@ -1,8 +1,8 @@
 #ifndef _fleurs_hpp
 #define _fleurs_hpp
-using namespace std;
+
 #include "plante.hpp"
-#include <string>
+#include <string.h>
 
 
 
@@ -10,12 +10,12 @@ class Fleurs: public Plante{
 
 protected :
 
-  string nom;
-  string couleur;  
+  String nom;
+  String couleur;  
  
 public :
 
-  Fleurs(string nom, string couleur);
+  Fleurs(String nom, String couleur);
 
   virtual void Caracteristiques();
  

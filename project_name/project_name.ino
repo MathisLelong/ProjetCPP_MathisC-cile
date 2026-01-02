@@ -1,8 +1,5 @@
 #include "Application.h"
-#include "plante.hpp"
-#include "fleurs.hpp"
-#include "Rose.hpp"
-#include "Tulipe.hpp"
+#include "LCD.hpp"
 
 
 Application myApplication;

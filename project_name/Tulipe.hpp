@@ -4,7 +4,7 @@
 #include "Fleurs.hpp"
 #include <string.h>
 
-using namespace std;
+
 
 class Tulipe: public Fleurs{
 
@@ -12,13 +12,13 @@ protected :
 
 
 public :
-  Tulipe(string c);
+  Tulipe(String c);
 
   virtual int TempsDePousse(); 
 
   int GetPointDeVie ();
 
-  static void ModifPointDeVie();
+
 
   ~Tulipe(); 
 

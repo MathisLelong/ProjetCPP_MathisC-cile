@@ -4,6 +4,8 @@
 
 using namespace std ;
 
+Capteur::Capteur(): Peripherique(){} 
+
 Capteur::Capteur(int b): Peripherique(b){    
 }
 

@@ -4,7 +4,7 @@
 #include "Fleurs.hpp"
 #include <string.h>
 
-using namespace std;
+
 
 class Rose: public Fleurs{
 
@@ -12,13 +12,13 @@ protected :
 
 
 public :
-  Rose(string c);
+  Rose(String c);
 
   virtual int TempsDePousse(); 
 
   int GetPointDeVie ();
 
-  static void ModifPointDeVie();
+
 
   ~Rose(); 
 

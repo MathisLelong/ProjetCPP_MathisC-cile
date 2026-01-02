@@ -1,7 +1,10 @@
 #ifndef _plante_hpp
 #define _plante_hpp
 
-using namespace std ;
+#include <Arduino.h>
+#include <string>
+#include "CapteurTemperature.hpp"
+
 
 class Plante {
 
@@ -9,6 +12,7 @@ protected :
 
   static int Compteur;
   static int point_de_vie; 
+  
 
   public :
 
@@ -18,11 +22,11 @@ protected :
 
   virtual void Caracteristiques()=0;
   virtual int TempsDePousse()=0;
-
+ 
 
   int GetCompteur ();
 
-  
+  void ModifPointDeVie(CapteurTemperature &capteur);
 
 };
 

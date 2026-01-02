@@ -1,10 +1,10 @@
-#include <iostream>
+
 #include <string.h>
 #include "fleurs.hpp"
 
-using namespace std ;
 
-Fleurs::Fleurs(string n, string c):Plante(){
+
+Fleurs::Fleurs(String n, String c):Plante(){
 
   nom = n;
   couleur = c; 
@@ -13,7 +13,9 @@ Fleurs::Fleurs(string n, string c):Plante(){
 
 void Fleurs::Caracteristiques(){
 
-  cout << nom <<' '<< couleur << endl; 
+  Serial.print(nom); 
+  Serial.print(couleur);
+
   
 }
 

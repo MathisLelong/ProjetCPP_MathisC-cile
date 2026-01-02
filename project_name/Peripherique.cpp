@@ -4,6 +4,8 @@
 
 using namespace std ;
 
+Peripherique::Peripherique(){}
+
 Peripherique::Peripherique(int b){
     broche=b;     
 }

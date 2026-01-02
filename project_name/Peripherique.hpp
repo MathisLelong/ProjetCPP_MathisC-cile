@@ -11,6 +11,7 @@ protected :
 
 public : 
 
+  Peripherique(); 
     Peripherique(int broche); 
 
   ~Peripherique(); 

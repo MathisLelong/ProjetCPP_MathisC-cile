@@ -9,7 +9,7 @@ using namespace std;
 class Capteur : public Peripherique {
 
     public : 
-
+  Capteur(); 
     Capteur(int b); 
 
   ~Capteur(); 

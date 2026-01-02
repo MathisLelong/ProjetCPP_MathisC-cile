@@ -1,8 +1,4 @@
-#include <iostream>
-#include <string>
 #include "plante.hpp"
-
-using namespace std ;
 
 Plante::Plante(){
 
@@ -23,3 +19,16 @@ int Plante::GetCompteur(){
   return Compteur;
 
 }
+
+void Plante::ModifPointDeVie(CapteurTemperature &capteurhum) {
+    if (capteurhum.lireValeurhum() < 39) {
+        point_de_vie -= 2;
+        if (point_de_vie < 0) {
+          point_de_vie = 0;
+          Serial.print("Plante Morte"); }
+    else if (capteurhum.lireValeurhum() > 39){
+        point_de_vie += 2;
+    }
+    }
+}
+    
