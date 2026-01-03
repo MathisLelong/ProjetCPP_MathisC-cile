@@ -9,7 +9,9 @@
 #include "CapteurTemperature.hpp"
 
 CapteurTemperature capteurHum;
+CapteurTemperature capteurTemp;
 Rose maRose("Rouge");
+LCD lcd; 
 
 Application::Application() 
 {
@@ -28,21 +30,30 @@ void Application::init(void)
   // Code
   Serial.begin(115200);
   capteurHum.init(); 
-    
+  capteurTemp.init(); 
+  lcd.init(); 
+ 
 }
 
 
 void Application::run(void)
 {
   // Code
-    capteurHum.lireValeurhum(); // lire l'humidité
-    maRose.ModifPointDeVie(capteurHum);
+   // capteurHum.lireValeurhum(); // lire l'humidité
+    //maRose.ModifPointDeVie(capteurHum);
 
-    Serial.print("Points de vie de la rose: ");
+   /* Serial.print("Points de vie de la rose: ");
     Serial.println(maRose.GetPointDeVie());
     Serial.println(capteurHum.lireValeurtemp());
     Serial.println(capteurHum.lireValeurhum());
-    Serial.println(maRose.GetPointDeVie());
+    Serial.println(maRose.GetPointDeVie());*/
 
-    delay(5000); // toutes les 5 secondes 
+     //lcd.afficherMessage("coucou") ; 
+
+   // delay(3000); // 
+   // lcd.effacer(); 
+   // delay(1000);
+    lcd.afficherTemperature(capteurTemp.lireValeurtemp()) ; 
+    lcd.afficherHumidite(capteurHum.lireValeurhum()) ; 
+    delay(3000);
 }

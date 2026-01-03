@@ -3,11 +3,11 @@
 
 #include <Arduino.h>
 #include <Wire.h>
-#include <Adafruit_LiquidCrystal.h>  
+#include "rgb_lcd.h" 
 
 class LCD {
 public:
-    // Constructeur
+   
     LCD();
 
     // Initialise l'écran
@@ -19,11 +19,17 @@ public:
     // Affiche la température
     void afficherTemperature(float temperature);
 
-    // Efface l'écran
-    void clear();
+    // Affiche l'humidité'
+    void afficherHumidite(float humidite);
 
-private:
-    Adafruit_LiquidCrystal _lcd; // objet LCD
+    // Efface l'écran
+    void effacer();
+
+protected:
+    rgb_lcd lcd; // objet LCD
+    const int colorR = 0; 
+    const int colorG = 255; 
+    const int colorB = 0; 
 };
 
 #endif

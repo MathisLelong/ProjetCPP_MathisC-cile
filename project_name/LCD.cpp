@@ -1,34 +1,35 @@
 #include "LCD.hpp"
 
-LCD::LCD()
-    : _lcd(0,0x3E, 0x62)
-{
+
+LCD::LCD(){
 }
 
-void LCD::init() {
-     Wire.begin(D1, D2);
-    _lcd.begin(16, 2);         // LCD 16x2
-    _lcd.setBacklight(HIGH);   // Allume rétroéclairage
-    _lcd.clear();
-    _lcd.setCursor(0, 0);
-    _lcd.print("Demarrage...");
+void LCD::init() { 
+    lcd.begin(16, 2);         // LCD 16x2
+    lcd.setRGB(colorR,colorG,colorB);
 }
 
 void LCD::afficherMessage(const String& message) {
-    _lcd.clear();
-    _lcd.setCursor(0, 0);
-    _lcd.print(message);
+    lcd.setCursor(0, 0);
+    lcd.print(message);
 }
 
 void LCD::afficherTemperature(float temperature) {
-    _lcd.clear();
-    _lcd.setCursor(0, 0);
-    _lcd.print("Temp: ");
-    _lcd.print(temperature);
-    _lcd.print((char)223); // ° symbole
-    _lcd.print("C");
+    lcd.setCursor(0, 1);
+    lcd.print("Temp: ");
+    lcd.print(temperature);
+    lcd.print((char)223); // ° symbole
+    lcd.print("C   ");
 }
 
-void LCD::clear() {
-    _lcd.clear();
+void LCD::afficherHumidite(float humidite) {
+    lcd.setCursor(0, 0);
+    lcd.print("Hum: ");
+    lcd.print(humidite);
+    lcd.print("%   "); 
+    
+}
+
+void LCD::effacer() {
+    lcd.clear();
 }
