@@ -46,6 +46,10 @@ void CapteurTemperature::AfficheHumidite(){
       Serial.println("% ");
     }
 
+bool CapteurTemperature::necessiteArrosage(float seuil) {
+    return Humidite < seuil;
+}
+
 CapteurTemperature::~CapteurTemperature(){
 
 

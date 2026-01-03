@@ -4,7 +4,7 @@
 
 
 
-Fleurs::Fleurs(String n, String c):Plante(){
+Fleurs::Fleurs(String n, String c, int dureeArrosage):Plante(){
 
   nom = n;
   couleur = c; 

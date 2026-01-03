@@ -15,7 +15,7 @@ protected :
  
 public :
 
-  Fleurs(String nom, String couleur);
+  Fleurs(String nom, String couleur, int dureeArrosage);
 
   virtual void Caracteristiques();
  

@@ -4,7 +4,7 @@
 
 
 
-Rose::Rose(String c):Fleurs("Rose",c){
+Rose::Rose(String c):Fleurs("Rose",c, 4000){
 
 }
 

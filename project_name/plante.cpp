@@ -3,7 +3,7 @@
 Plante::Plante(){
 
   Compteur++;
-
+  
 }
 
 Plante::~Plante(){
@@ -21,13 +21,13 @@ int Plante::GetCompteur(){
 }
 
 void Plante::ModifPointDeVie(CapteurTemperature &capteurhum) {
-    if (capteurhum.lireValeurhum() < 39) {
-        point_de_vie -= 2;
+    if (capteurhum.lireValeurhum() < 30) {
+        point_de_vie -= 1;
         if (point_de_vie < 0) {
           point_de_vie = 0;
           Serial.print("Plante Morte"); }
-    else if (capteurhum.lireValeurhum() > 39){
-        point_de_vie += 2;
+    else if (capteurhum.lireValeurhum() > 50){
+        point_de_vie += 1;
     }
     }
 }

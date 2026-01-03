@@ -4,7 +4,7 @@
 
 
 
-Tulipe::Tulipe(String c):Fleurs("Tulipe",c){
+Tulipe::Tulipe(String c):Fleurs("Tulipe",c, 8000){
 
 }
 
@@ -16,7 +16,6 @@ int Tulipe::TempsDePousse(){
 int Tulipe::GetPointDeVie(){
     return point_de_vie; 
 }
-
 
 
 Tulipe::~Tulipe(){

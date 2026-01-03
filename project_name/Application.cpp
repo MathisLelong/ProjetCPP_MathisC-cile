@@ -7,11 +7,14 @@
 #include "LCD.hpp"
 #include "Rose.hpp"
 #include "CapteurTemperature.hpp"
+#include "Led.hpp"
 
 CapteurTemperature capteurHum;
 CapteurTemperature capteurTemp;
 Rose maRose("Rouge");
 LCD lcd; 
+Led led(BROCHE_LED); 
+Buzzer() 
 
 Application::Application() 
 {
@@ -53,7 +56,12 @@ void Application::run(void)
    // delay(3000); // 
    // lcd.effacer(); 
    // delay(1000);
-    lcd.afficherTemperature(capteurTemp.lireValeurtemp()) ; 
-    lcd.afficherHumidite(capteurHum.lireValeurhum()) ; 
+    //lcd.afficherTemperature(capteurTemp.lireValeurtemp()) ; 
+    //lcd.afficherHumidite(capteurHum.lireValeurhum()) ; 
+
+   /* led.activer(); 
     delay(3000);
+    led.toggle(); */
+
+
 }
