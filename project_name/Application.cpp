@@ -8,13 +8,15 @@
 #include "Rose.hpp"
 #include "CapteurTemperature.hpp"
 #include "Led.hpp"
+#include "Arrosage.hpp"
 
-CapteurTemperature capteurHum;
-CapteurTemperature capteurTemp;
-Rose maRose("Rouge");
-LCD lcd; 
-Led led(BROCHE_LED); 
-Buzzer() 
+//CapteurTemperature capteurHum;
+//CapteurTemperature capteurTemp;
+//Rose maRose("Rouge");
+//LCD lcd; 
+Led led(BROCHE_LED);
+CapteurTactile ct(BROCHE_CT);
+Arrosage arroser(led,ct); 
 
 Application::Application() 
 {
@@ -32,9 +34,9 @@ void Application::init(void)
 {
   // Code
   Serial.begin(115200);
-  capteurHum.init(); 
-  capteurTemp.init(); 
-  lcd.init(); 
+  //capteurHum.init(); 
+  //capteurTemp.init(); 
+ // lcd.init(); 
  
 }
 
@@ -62,6 +64,6 @@ void Application::run(void)
    /* led.activer(); 
     delay(3000);
     led.toggle(); */
-
+  arroser.ChangerModeArrosage(); 
 
 }

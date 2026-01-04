@@ -21,7 +21,7 @@ int Plante::GetCompteur(){
 }
 
 void Plante::ModifPointDeVie(CapteurTemperature &capteurhum) {
-    if (capteurhum.lireValeurhum() < 30) {
+    if (capteurhum.lireValeurhum() < 25) {
         point_de_vie -= 1;
         if (point_de_vie < 0) {
           point_de_vie = 0;

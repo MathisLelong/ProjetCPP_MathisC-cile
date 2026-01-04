@@ -8,9 +8,12 @@ using namespace std;
 
 class Capteur : public Peripherique {
 
+  protected :
+
     public : 
+
   Capteur(); 
-    Capteur(int b); 
+  Capteur(int b); 
 
   ~Capteur(); 
 
