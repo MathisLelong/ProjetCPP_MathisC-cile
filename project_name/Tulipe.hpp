@@ -18,7 +18,9 @@ public :
 
   int GetPointDeVie ();
 
+  int GetDureeArrosage();
 
+  float GetSeuilArrosage();
 
   ~Tulipe(); 
 

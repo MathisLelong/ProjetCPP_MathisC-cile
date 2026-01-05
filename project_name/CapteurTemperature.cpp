@@ -47,8 +47,9 @@ void CapteurTemperature::AfficheHumidite(){
     }
 
 bool CapteurTemperature::necessiteArrosage(float seuil) {
-    return Humidite < seuil;
+    return lireValeurhum() < seuil;
 }
+
 
 CapteurTemperature::~CapteurTemperature(){
 

@@ -13,6 +13,14 @@ int Rose::TempsDePousse(){
     return 15;
 }
 
+int Rose::GetDureeArrosage(){
+    return 5000; 
+}
+
+float Rose:: GetSeuilArrosage(){
+    return 40.0; 
+}
+
 
 
 int Rose::GetPointDeVie(){

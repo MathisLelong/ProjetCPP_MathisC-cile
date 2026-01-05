@@ -3,7 +3,7 @@
 
 #include "Actionneur.hpp"
 
-#define BROCHE_BUZZER 
+#define BROCHE_BUZZER D6
 
 class Buzzer : public Actionneur {
 public:

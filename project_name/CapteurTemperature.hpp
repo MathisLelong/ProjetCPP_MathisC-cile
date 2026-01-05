@@ -31,9 +31,8 @@ class CapteurTemperature : public Capteur {
    
      void AfficheHumidite();
 
-     bool necessiteArrosage(float seuil = 30.0);
-
-
+    bool necessiteArrosage(float seuil);
+     
   ~CapteurTemperature(); 
 
 };

@@ -17,6 +17,13 @@ int Tulipe::GetPointDeVie(){
     return point_de_vie; 
 }
 
+int Tulipe::GetDureeArrosage(){
+    return 10000; 
+}
+
+float Tulipe::GetSeuilArrosage(){
+    return 30.0; 
+}
 
 Tulipe::~Tulipe(){
 

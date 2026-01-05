@@ -5,6 +5,9 @@
 #include "CapteurTactile.hpp"
 #include "Led.hpp"
 #include "Buzzer.hpp"
+#include "CapteurTemperature.hpp"
+#include <vector>
+#include "plante.hpp"
 
 class Arrosage {
 
@@ -12,14 +15,21 @@ class Arrosage {
 
   CapteurTactile& CT; 
   Led& led; 
+  Buzzer& buzz;
+  CapteurTemperature& Temp;
+  std::vector<Plante*> plantes; 
+  
   bool ModeAuto;
   bool DernierEtat;
 
   public : 
 
-  Arrosage(Led& l, CapteurTactile& c);
+  void ArroserPlante();
+  Arrosage(Led& l, CapteurTactile& c, Buzzer& b, CapteurTemperature& T);
 
   void ChangerModeArrosage();  
+
+  void AjouterPlante(Plante* plante);
     
   ~Arrosage(); 
 
