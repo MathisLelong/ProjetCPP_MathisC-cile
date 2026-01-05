@@ -11,8 +11,8 @@ class Plante {
 protected :
 
   static int Compteur;
-  static int point_de_vie; 
-  static int dureeArrosage; 
+  int point_de_vie; 
+  int dureeArrosage; 
   
 
   public :
@@ -21,10 +21,11 @@ protected :
 
   ~Plante();
 
-  virtual void Caracteristiques()=0;
+  virtual String Caracteristiques()=0;
   virtual int TempsDePousse()=0;
   virtual int GetDureeArrosage()=0;  
   virtual float GetSeuilArrosage()=0; 
+  virtual int GetPointDeVie()=0;
 
   int GetCompteur ();
 

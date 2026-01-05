@@ -3,7 +3,7 @@
 Plante::Plante(){
 
   Compteur++;
-  
+  point_de_vie=5;
 }
 
 Plante::~Plante(){
@@ -12,7 +12,7 @@ Plante::~Plante(){
 
 
 int Plante::Compteur=0;
-int Plante::point_de_vie=5; 
+ 
 
 int Plante::GetCompteur(){
 

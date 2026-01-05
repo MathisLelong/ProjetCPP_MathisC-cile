@@ -17,7 +17,7 @@ public :
 
   Fleurs(String nom, String couleur, int dureeArrosage);
 
-  virtual void Caracteristiques();
+ String Caracteristiques();
  
   ~Fleurs(); 
 

@@ -4,23 +4,21 @@
  * @brief Fichier source de l'application
  *********************************************************************/
 #include "Application.h"
-#include "LCD.hpp"
-#include "Rose.hpp"
-#include "Tulipe.hpp"
-#include "CapteurTemperature.hpp"
-#include "Led.hpp"
-#include "Arrosage.hpp"
+
 
 CapteurTemperature Temp;
-
-//LCD lcd; 
+LCD lcd; 
 Led led(BROCHE_LED);
 CapteurTactile ct(BROCHE_CT);
 Buzzer buzz(BROCHE_BUZZER);
+BoutonPoussoir bp(BROCHE_BP);
+
 Rose rose1("rouge");
 Tulipe tulipe1("bleue");
 Rose rose2("blanche");
-Arrosage arroser(led,ct,buzz,Temp); 
+
+Arrosage arroser(led,ct,buzz,Temp);
+
 
 Application::Application() 
 {
@@ -39,13 +37,14 @@ void Application::init(void)
   // Code
   Serial.begin(115200);
   //capteurHum.init(); 
+  
+  lcd.init(); 
   Temp.init(); 
- // lcd.init(); 
   arroser.AjouterPlante(&rose1);
   arroser.AjouterPlante(&tulipe1);
   arroser.AjouterPlante(&rose2);
  
- 
+  plantes = { &rose1, &tulipe1, &rose2 };
 }
 
 
@@ -72,7 +71,8 @@ void Application::run(void)
    /* led.activer(); 
     delay(3000);
     led.toggle(); */
-  arroser.ChangerModeArrosage(); 
-  arroser.ArroserPlante(); 
-
+ // arroser.ChangerModeArrosage(); 
+  //arroser.ArroserPlante(); 
+  lcd.GererMenuLCD(bp, Temp, plantes); 
+  delay(50);
 }

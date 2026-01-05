@@ -4,7 +4,7 @@
 #include <string.h>
 #include "Capteur.hpp"
 
-#define BROCHE_BP A0
+#define BROCHE_BP D3
 
 class BoutonPoussoir : public Capteur {
 

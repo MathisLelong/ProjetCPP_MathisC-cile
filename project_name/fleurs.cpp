@@ -11,10 +11,10 @@ Fleurs::Fleurs(String n, String c, int dureeArrosage):Plante(){
 
 }
 
-void Fleurs::Caracteristiques(){
+String Fleurs::Caracteristiques(){
 
-  Serial.print(nom); 
-  Serial.print(couleur);
+  String s= nom + " " + couleur ; 
+  return s;
 
   
 }

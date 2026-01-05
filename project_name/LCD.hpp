@@ -4,6 +4,9 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include "rgb_lcd.h" 
+#include "BoutonPoussoir.hpp"
+#include "CapteurTemperature.hpp"
+#include "Plante.hpp"
 
 class LCD {
 public:
@@ -21,6 +24,8 @@ public:
 
     // Affiche l'humidité'
     void afficherHumidite(float humidite);
+
+    void GererMenuLCD(BoutonPoussoir& bp, CapteurTemperature& Temp, std::vector<Plante*>& plantes);
 
     // Efface l'écran
     void effacer();

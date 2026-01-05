@@ -1,12 +1,12 @@
 #include "BoutonPoussoir.hpp"
 
 BoutonPoussoir::BoutonPoussoir(int b):Capteur(b){
-  pinMode(BROCHE_BP, INPUT);
+  pinMode(broche, INPUT);
 }
 
 
 bool BoutonPoussoir::LireEtat(){
-  return digitalRead(BROCHE_BP)==HIGH;
+  return digitalRead(broche)==HIGH;
   
 }
 
