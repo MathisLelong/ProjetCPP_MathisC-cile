@@ -1,3 +1,5 @@
+/////////////////////CLASSE CAPTEUR////////////////////////////////////
+
 #ifndef _Capteur_hpp
 #define _Capteur_hpp
 
@@ -12,9 +14,13 @@ class Capteur : public Peripherique {
 
     public : 
 
+  // Constructeur sans argument pour I2C 
   Capteur(); 
+
+  // Constructeur avec la broche en argument 
   Capteur(int b); 
 
+   // Destructeur 
   ~Capteur(); 
 
 };

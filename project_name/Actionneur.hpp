@@ -1,3 +1,5 @@
+/////////////////////CLASSE ACTIONNEUR////////////////////////////////////
+
 #ifndef ACTIONNEUR_HPP
 #define ACTIONNEUR_HPP
 
@@ -5,15 +7,24 @@
 
 class Actionneur : public Peripherique {
 protected:
-    bool etat;
+    bool etat; //Etat true si activé ou false si non activé 
     
 public:
+
+    //Constructeur 
     Actionneur(int b);
-    virtual ~Actionneur();
     
-    virtual void activer() = 0;
-    virtual void desactiver() = 0;
-    bool getEtat() { return etat; }
+    //fonction qui active l'actionneur (true, HIGH)
+    virtual void Activer() = 0;
+
+    //fonction qui desactive l'actionneur (false, LOW)
+    virtual void Desactiver() = 0;
+
+    //fonction qui retourne l'état de l'actionneur
+    bool GetEtat(); 
+
+    //Destructeur 
+    ~Actionneur();
 };
 
 #endif

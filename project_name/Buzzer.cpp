@@ -4,27 +4,27 @@
 Buzzer::Buzzer(int b) : Actionneur(b) {
 }
 
-void Buzzer::activer() {
+void Buzzer::Activer() {
     etat = true;
     digitalWrite(broche, HIGH);
 }
 
-void Buzzer::desactiver() {
+void Buzzer::Desactiver() {
     etat = false;
     digitalWrite(broche, LOW);
 }
 
-void Buzzer::bip(int duree) {
-    activer();
+void Buzzer::Bip(int duree) {
+    Activer();
     delay(duree);
-    desactiver();
+    Desactiver();
 }
 
-void Buzzer::signal(int nbBips, int duree, int pause) {
+void Buzzer::Signal(int nbBips, int duree, int pause) {
     for(int i = 0; i < nbBips; i++) {
-        activer();
+        Activer();
         delay(duree);
-        desactiver();
+        Desactiver();
         if(i < nbBips - 1) {
             delay(pause);
         }
@@ -32,5 +32,5 @@ void Buzzer::signal(int nbBips, int duree, int pause) {
 }
 
 Buzzer::~Buzzer() {
-    desactiver();
+    Desactiver();
 }

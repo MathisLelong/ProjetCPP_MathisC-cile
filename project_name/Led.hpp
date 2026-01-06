@@ -1,3 +1,5 @@
+/////////////////////CLASSE LED////////////////////////////////////
+
 #ifndef LED_HPP
 #define LED_HPP
 
@@ -7,12 +9,21 @@
 
 class Led : public Actionneur {
 public:
+
+    //Constructeur
     Led(int b);
-    virtual ~Led();
     
-    void activer() override;
-    void desactiver() override;
-    void toggle();
+    //fonction qui allume la led 
+    void Activer() override;
+
+    //fonction qui éteint la led 
+    void Desactiver() override;
+
+    //fonction qui fait clignoter la led 
+    void Toggle();
+
+    //Destructeur
+    ~Led();
 };
 
 #endif

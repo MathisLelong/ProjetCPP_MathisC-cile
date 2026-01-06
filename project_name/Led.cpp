@@ -4,24 +4,24 @@
 Led::Led(int b) : Actionneur(b) {
 }
 
-void Led::activer() {
+void Led::Activer() {
     etat = true;
     digitalWrite(broche, HIGH);
 }
 
-void Led::desactiver() {
+void Led::Desactiver() {
     etat = false;
     digitalWrite(broche, LOW);
 }
 
-void Led::toggle() {
+void Led::Toggle() {
     if (etat) {
-        desactiver();
+        Desactiver();
     } else {
-        activer();
+        Activer();
     }
 }
 
 Led::~Led() {
-    desactiver();
+    Desactiver();
 }

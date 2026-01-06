@@ -1,3 +1,5 @@
+/////////////////////CLASSE CAPTEUR TACTILE////////////////////////////////////
+
 #ifndef _CapteurTactile_hpp
 #define _CapteurTactile_hpp
 #include <Arduino.h>
@@ -12,10 +14,13 @@ class CapteurTactile : public Capteur {
   
   public : 
 
+  //Constructeur 
     CapteurTactile(int b);
 
+  //fonction qui lit l'état du capteur tactile (touché ou non)
     bool LireEtat();
 
+  //Destructeur
   ~CapteurTactile(); 
 
 };

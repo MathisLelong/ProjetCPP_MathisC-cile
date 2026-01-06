@@ -4,7 +4,7 @@ CapteurTemperature::CapteurTemperature()
     : Temperature(0), Humidite(0) {
 }
 
-void CapteurTemperature::init() {
+void CapteurTemperature::Init() {
     Wire.begin(D2, D1);
     if (!sht31.begin(0x44)) { 
         Serial.println("Erreur: SHT31 non détecté !");
@@ -12,7 +12,7 @@ void CapteurTemperature::init() {
     }}
 
 
-float CapteurTemperature::lireValeurtemp() {
+float CapteurTemperature::LireValeurtemp() {
     float t = sht31.readTemperature();
     if (!isnan(t)) {
         Temperature = t;
@@ -29,7 +29,7 @@ void CapteurTemperature::AfficheTemperature(){
       Serial.println(" °C");
     }
 
-    float CapteurTemperature::lireValeurhum() {
+    float CapteurTemperature::LireValeurhum() {
     int h = sht31.readHumidity();
     if (!isnan(h)) {
         Humidite = h;
@@ -46,8 +46,8 @@ void CapteurTemperature::AfficheHumidite(){
       Serial.println("% ");
     }
 
-bool CapteurTemperature::necessiteArrosage(float seuil) {
-    return lireValeurhum() < seuil;
+bool CapteurTemperature::NecessiteArrosage(float seuil) {
+    return LireValeurhum() < seuil;
 }
 
 

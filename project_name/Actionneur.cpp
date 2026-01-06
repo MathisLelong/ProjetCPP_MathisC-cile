@@ -7,5 +7,9 @@ Actionneur::Actionneur(int b) : Peripherique(b) {
     digitalWrite(broche, LOW);
 }
 
+bool Actionneur::GetEtat(){ 
+    return etat; 
+}
+
 Actionneur::~Actionneur() {
 }

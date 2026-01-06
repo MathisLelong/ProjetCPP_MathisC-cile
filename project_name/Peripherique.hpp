@@ -1,8 +1,7 @@
+/////////////////////CLASSE PERIPHERIQUE////////////////////////////////////
+
 #ifndef _Peripherique_hpp
 #define _Peripherique_hpp
-
-
-using namespace std;
 
 class Peripherique {
 
@@ -11,9 +10,13 @@ protected :
 
 public : 
 
+//Constructeur sans argument pour I2C 
   Peripherique(); 
-    Peripherique(int broche); 
 
+//Constructeur avec argument
+ Peripherique(int broche); 
+
+//destructeur
   ~Peripherique(); 
 
 };

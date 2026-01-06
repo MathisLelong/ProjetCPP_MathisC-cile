@@ -36,10 +36,9 @@ void Application::init(void)
 {
   // Code
   Serial.begin(115200);
-  //capteurHum.init(); 
   
-  lcd.init(); 
-  Temp.init(); 
+  lcd.Init(); 
+  Temp.Init(); 
   arroser.AjouterPlante(&rose1);
   arroser.AjouterPlante(&tulipe1);
   arroser.AjouterPlante(&rose2);
@@ -52,27 +51,14 @@ void Application::run(void)
 {
   // Code
    // capteurHum.lireValeurhum(); // lire l'humidité
-    //maRose.ModifPointDeVie(capteurHum);
+   if (millis() - DerniereMiseAJourPlantes >= IntervalMiseAJourPlantes){
+    rose1.ModifPointDeVie(Temp);
+    tulipe1.ModifPointDeVie(Temp);
+    rose2.ModifPointDeVie(Temp);
+    DerniereMiseAJourPlantes = millis();} 
 
-   /* Serial.print("Points de vie de la rose: ");
-    Serial.println(maRose.GetPointDeVie());
-    Serial.println(capteurHum.lireValeurtemp());
-    Serial.println(capteurHum.lireValeurhum());
-    Serial.println(maRose.GetPointDeVie());*/
-
-     //lcd.afficherMessage("coucou") ; 
-
-   // delay(3000); // 
-   // lcd.effacer(); 
-   // delay(1000);
-    //lcd.afficherTemperature(capteurTemp.lireValeurtemp()) ; 
-    //lcd.afficherHumidite(capteurHum.lireValeurhum()) ; 
-
-   /* led.activer(); 
-    delay(3000);
-    led.toggle(); */
- // arroser.ChangerModeArrosage(); 
+  arroser.ChangerModeArrosage(); 
   //arroser.ArroserPlante(); 
   lcd.GererMenuLCD(bp, Temp, plantes); 
-  delay(50);
+    
 }

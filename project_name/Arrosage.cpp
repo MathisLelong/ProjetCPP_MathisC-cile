@@ -8,10 +8,10 @@ void Arrosage::ArroserPlante(){
   if (ModeAuto){
 
     for (Plante* plante : plantes) {
-        if (Temp.necessiteArrosage(plante->GetSeuilArrosage())) {
-            buzz.activer();
+        if (Temp.NecessiteArrosage(plante->GetSeuilArrosage())) {
+            buzz.Activer();
             delay(plante->GetDureeArrosage());
-            buzz.desactiver();
+            buzz.Desactiver();
         }
     }
   }
@@ -24,9 +24,9 @@ void Arrosage::ArroserPlante(){
     if (EtatActuel && !DernierEtat){
       ModeAuto=!ModeAuto; 
       if (!ModeAuto)
-      led.desactiver(); 
+      led.Desactiver(); 
      else
-      led.activer();
+      led.Activer();
     }
    
 

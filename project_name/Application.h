@@ -25,6 +25,8 @@ class Application
 {
   protected :
     std::vector<Plante*> plantes;
+    unsigned long DerniereMiseAJourPlantes;
+    const unsigned long IntervalMiseAJourPlantes = 10000;
   public :
     /**
      * @fn Application();
