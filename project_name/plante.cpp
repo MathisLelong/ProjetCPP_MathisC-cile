@@ -21,15 +21,17 @@ int Plante::GetCompteur(){
 }
 
 void Plante::ModifPointDeVie(CapteurTemperature &capteurhum) {
-    if (capteurhum.LireValeurhum() < 35) {
+    int seuil = GetSeuilArrosage(); 
+    
+    if (capteurhum.LireValeurhum() < seuil) {
         point_de_vie -= 1;
         if (point_de_vie < 0) {
           point_de_vie = 0;
           }}
-    else if (capteurhum.LireValeurhum() > 50){
+    else if (capteurhum.LireValeurhum() > seuil+15){
         point_de_vie += 1;
-         if (point_de_vie > 5) {
-          point_de_vie = 5;
+         if (point_de_vie > 10) {
+          point_de_vie = 10;
           }
     }
 

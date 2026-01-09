@@ -62,6 +62,10 @@ void Application::run(void)
     rose1.ModifPointDeVie(Temp);
     tulipe1.ModifPointDeVie(Temp);
     rose2.ModifPointDeVie(Temp);
+    citrouille.ModifPointDeVie(Temp);
+    poireau.ModifPointDeVie(Temp);
+    poireau1.ModifPointDeVie(Temp);
+    poireau2.ModifPointDeVie(Temp); 
     DerniereMiseAJourPlantes = millis();} 
 
   arroser.ChangerModeArrosage(); 
