@@ -6,7 +6,8 @@
 #include <string.h>
 #include "Capteur.hpp"
 
-#define BROCHE_BP D8
+#define BROCHE_BP1 D8
+#define BROCHE_BP2 A0
 
 class BoutonPoussoir : public Capteur {
 

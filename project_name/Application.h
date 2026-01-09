@@ -5,30 +5,15 @@
  *********************************************************************/
 #ifndef APPLICATION_H_
 #define APPLICATION_H_
-#include <Arduino.h>
-#include <vector>
-#include "LCD.hpp"
-#include "Led.hpp"
-#include "Buzzer.hpp"
-#include "CapteurTactile.hpp"
-#include "CapteurTemperature.hpp"
-#include "Arrosage.hpp"
-#include "Rose.hpp"
-#include "Tulipe.hpp"
-#include "BoutonPoussoir.hpp"
-#include "plante.hpp"
-#include "poireau.hpp"
-#include "citrouille.hpp"
+#include "Jardin.hpp"
 /**
   * @class Application
   * @brief Classe Application 
 */    
 class Application
 {
-  protected :
-    std::vector<Plante*> plantes;
-    unsigned long DerniereMiseAJourPlantes;
-    const unsigned long IntervalMiseAJourPlantes = 30000;
+  protected : 
+  Jardin monJardin;
   public :
     /**
      * @fn Application();
