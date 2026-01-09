@@ -11,23 +11,29 @@ class Citrouille: public Legume{
 protected:
   
   int diametre;
-  string nom;
+  String nom;
 
 public:
 
-  Citrouille (int d, string n);
+  Citrouille (int d, String n);
   
-  void Caracteristiques();
+  String Caracteristiques();
 
   int TempsDePousse();
 
   Citrouille& operator+( Citrouille& c1);
 
-  string getname();
+  String getname();
 
   int getdiam();
 
   friend Citrouille& operator+ (Citrouille& c1, Citrouille& c2);
+
+  int GetPointDeVie();
+
+int GetDureeArrosage();
+
+float GetSeuilArrosage();
   
   ~Citrouille();
 

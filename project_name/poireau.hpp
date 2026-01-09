@@ -4,30 +4,35 @@
 # include "legume.hpp"
 
 
-using namespace std ;
 
 class Poireau: public Legume{
 
 protected:
   
   int longueur;
-  string nom;
+  String nom;
 
 public:
 
-  Poireau(int l, string n);
+  Poireau(int l, String n);
   
-  void Caracteristiques();
+  String Caracteristiques();
 
   int TempsDePousse();
 
   Poireau& operator+( Poireau& p1);
 
-  string getname();
+  String getname();
 
   int getlenght();
 
   friend Poireau& operator+ (Poireau& p1, Poireau& p2);
+
+  int GetPointDeVie();
+
+int GetDureeArrosage();
+
+float GetSeuilArrosage();
   
   ~Poireau();
 

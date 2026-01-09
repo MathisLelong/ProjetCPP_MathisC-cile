@@ -1,20 +1,19 @@
-#include <iostream>
+#include <Arduino.h>
 #include <string.h>
 #include "poireau.hpp"
 
-using namespace std ;
 
-Poireau::Poireau(int l,string n):Legume(){
+Poireau::Poireau(int l,String n):Legume(){
 
-  printf("Poireau crée");
   longueur=l;
   nom=n;
 
 }
 
-void Poireau::Caracteristiques(){
+String Poireau::Caracteristiques(){
 
-  cout << longueur << endl ;
+  String s= nom + " " + String(longueur); 
+  return s;
   
 }
 
@@ -25,7 +24,7 @@ int Poireau::TempsDePousse(){
 }
 
 
-string Poireau::getname(){
+String Poireau::getname(){
 
   return nom;
 
@@ -42,13 +41,26 @@ int Poireau::getlenght(){
 
 Poireau& operator+ ( Poireau& p1, Poireau& p2){
   int newl;
-  string newname;
+  String newname;
   newl=((p2.getlenght())+(p1.getlenght()))/2;
   newname="bébé";
   static Poireau p3(newl,newname);
   return p3;
 
 }
+
+int Poireau::GetPointDeVie(){
+    return point_de_vie; 
+}
+
+int Poireau::GetDureeArrosage(){
+    return 12000; 
+}
+
+float Poireau::GetSeuilArrosage(){
+    return 60.0; 
+}
+
 
 Poireau::~Poireau(){}
 
