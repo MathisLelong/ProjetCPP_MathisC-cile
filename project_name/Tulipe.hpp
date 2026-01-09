@@ -3,7 +3,7 @@
 #ifndef _Tulipe_hpp
 #define _Tulipe_hpp
 
-#include "Fleurs.hpp"
+#include "fleurs.hpp"
 #include <string.h>
 
 

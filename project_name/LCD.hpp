@@ -8,7 +8,7 @@
 #include "rgb_lcd.h" 
 #include "BoutonPoussoir.hpp"
 #include "CapteurTemperature.hpp"
-#include "Plante.hpp"
+#include "plante.hpp"
 
 class LCD {
 
