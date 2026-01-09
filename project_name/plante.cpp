@@ -28,6 +28,9 @@ void Plante::ModifPointDeVie(CapteurTemperature &capteurhum) {
           }}
     else if (capteurhum.LireValeurhum() > 50){
         point_de_vie += 1;
+         if (point_de_vie > 5) {
+          point_de_vie = 5;
+          }
     }
 
 }

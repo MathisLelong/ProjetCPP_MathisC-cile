@@ -17,6 +17,8 @@
 #include "Tulipe.hpp"
 #include "BoutonPoussoir.hpp"
 #include "plante.hpp"
+#include "poireau.hpp"
+#include "citrouille.hpp"
 /**
   * @class Application
   * @brief Classe Application 

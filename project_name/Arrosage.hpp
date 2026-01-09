@@ -26,6 +26,10 @@ class Arrosage {
   
   bool ModeAuto; //mode arrosage automatique
   bool DernierEtat; //dernier mode d'arrosage 
+  size_t planteIndex; //plante en cours 
+  bool enCours; 
+  unsigned long debutArrosage = 0; 
+  unsigned long dureeArrosage = 0;
 
   public : 
  

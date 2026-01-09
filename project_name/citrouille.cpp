@@ -43,7 +43,11 @@ Citrouille& operator+ ( Citrouille& c1, Citrouille& c2){
   int newd;
   String newname;
   newd=((c2.getdiam())+(c1.getdiam()))/2;
-  newname="bébé";
+  String n1=c1.getname();
+  String n2=c2.getname();
+  String prefix=n1.substring(0,3);
+  String sufix=n2.substring(n2.length()-3);
+  newname= prefix+sufix;
   static Citrouille c3(newd,newname);
   return c3;
 
@@ -58,7 +62,7 @@ int Citrouille::GetDureeArrosage(){
 }
 
 float Citrouille::GetSeuilArrosage(){
-    return 50.0; 
+    return 10.0; 
 }
 
 

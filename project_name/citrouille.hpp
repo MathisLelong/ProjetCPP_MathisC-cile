@@ -21,8 +21,6 @@ public:
 
   int TempsDePousse();
 
-  Citrouille& operator+( Citrouille& c1);
-
   String getname();
 
   int getdiam();

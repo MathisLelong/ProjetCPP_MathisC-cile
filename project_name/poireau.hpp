@@ -20,8 +20,6 @@ public:
 
   int TempsDePousse();
 
-  Poireau& operator+( Poireau& p1);
-
   String getname();
 
   int getlenght();

@@ -43,7 +43,11 @@ Poireau& operator+ ( Poireau& p1, Poireau& p2){
   int newl;
   String newname;
   newl=((p2.getlenght())+(p1.getlenght()))/2;
-  newname="bébé";
+  String n1=p1.getname();
+  String n2=p2.getname();
+  String prefix=n1.substring(0,3);
+  String sufix=n2.substring(n2.length()-3);
+  newname= prefix+sufix;
   static Poireau p3(newl,newname);
   return p3;
 
@@ -58,7 +62,7 @@ int Poireau::GetDureeArrosage(){
 }
 
 float Poireau::GetSeuilArrosage(){
-    return 60.0; 
+    return 10.0; 
 }
 
 

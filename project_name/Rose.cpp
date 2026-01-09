@@ -14,11 +14,11 @@ int Rose::TempsDePousse(){
 }
 
 int Rose::GetDureeArrosage(){
-    return 5000; 
+    return 2000; 
 }
 
 float Rose:: GetSeuilArrosage(){
-    return 40.0; 
+    return 70.0; 
 }
 
 
