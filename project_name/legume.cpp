@@ -1,24 +1,17 @@
 #include <iostream>
 #include <string.h>
-#include "Legume.hpp"
+#include "legume.hpp"
 
 using namespace std ;
 
-Legume::Legume(string e):Plante(){
+Legume::Legume():Plante(){
 
   printf("Legume crée");
 
-  espece=e;
-
 
 }
 
 
-void Legume::caracteristiques(){
-
-  cout<< espece << endl;
-
-}
 
 
 Legume::~Legume(){
