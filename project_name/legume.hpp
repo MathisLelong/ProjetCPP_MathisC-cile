@@ -9,15 +9,14 @@ class Legume: public Plante{
 
 protected:
 
-  string espece;
 
 
 public:
 
-  Legume(string espece);
-  virtual void caracteristiques();
+  Legume();
+  //virtual void Caracteristiques();
 
-  ~Legume();
+  virtual ~Legume();
 
 
 };
@@ -26,6 +25,3 @@ public:
 #endif
 
 
-
-
-#endif
