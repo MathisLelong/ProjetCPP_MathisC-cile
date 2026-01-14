@@ -46,18 +46,4 @@ float GetSeuilArrosage();
 };
 
 
-
-
-Citrouille& operator+ (Citrouille& p1, Citrouille& p2);
-
-
-
-
-
-
-
-
-
-
-
 #endif

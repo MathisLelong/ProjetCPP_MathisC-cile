@@ -47,21 +47,6 @@ float GetSeuilArrosage();
 
 };
 
-
-
-
-Poireau& operator+ (Poireau& p1, Poireau& p2);
-
-
-
-
-
-
-
-
-
-
-
 #endif
 
 
