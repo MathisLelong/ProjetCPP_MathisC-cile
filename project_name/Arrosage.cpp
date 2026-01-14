@@ -26,7 +26,7 @@ void Arrosage::ArroserPlante() {
 
         // trouver la prochaine plante qui nécessite arrosage
         while (planteIndex < plantes.size() &&
-               !Temp.NecessiteArrosage(plantes[planteIndex]->GetSeuilArrosage())) {
+               (!Temp.NecessiteArrosage(plantes[planteIndex]->GetSeuilArrosage()) || plantes[planteIndex]->GetPointDeVie()==0)) {
             planteIndex++;
         }
 
@@ -59,10 +59,14 @@ void Arrosage::ArroserPlante() {
     
     if (EtatActuel && !DernierEtat){
       ModeAuto=!ModeAuto; 
-      if (!ModeAuto)
-      led.Desactiver(); 
-     else
-      led.Activer();
+      if (!ModeAuto && enCours==false){
+      led.Desactiver(); }
+     else if (!ModeAuto && enCours==true){
+        buzz.Desactiver(); 
+        led.Desactiver(); 
+     }
+     else{
+      led.Activer();}
     }
    
 
