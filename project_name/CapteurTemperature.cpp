@@ -7,7 +7,7 @@ CapteurTemperature::CapteurTemperature()
 void CapteurTemperature::Init() {
     Wire.begin(D2, D1);
     if (!sht31.begin(0x44)) { 
-        Serial.println("Erreur: SHT31 non détecté !");
+        Serial.println("Erreur: SHT31 non détecté !"); // test car le capteur peut être non détecté (souvent)
         while (1);
     }}
 

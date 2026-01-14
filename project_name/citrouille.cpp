@@ -39,14 +39,14 @@ int Citrouille::getdiam(){
 
 
 Citrouille& operator+ ( Citrouille& c1, Citrouille& c2){
-  int newd;
-  String newname;
+  int newd; //nouveau diamètre
+  String newname;  // nouveau nom
   newd=((c2.getdiam())+(c1.getdiam()))/2;
   String n1=c1.getname();
   String n2=c2.getname();
   String prefix=n1.substring(0,3);
   String sufix=n2.substring(n2.length()-3);
-  newname= prefix+sufix;
+  newname= prefix+sufix; // 3 premières lettres de la première citrouille et 3 dernières de la deuxième 
   static Citrouille c3(newd,newname);
   return c3;
 

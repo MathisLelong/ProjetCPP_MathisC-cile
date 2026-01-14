@@ -1,52 +1,49 @@
+/////////////////////CLASSE JARDIN////////////////////////////////////
+
 #ifndef JARDIN_HPP
 #define JARDIN_HPP
 
-#include <vector>
-#include <Arduino.h>
-#include "Plante.hpp"
 #include "Rose.hpp"
 #include "Tulipe.hpp"
 #include "Poireau.hpp"
 #include "Citrouille.hpp"
-#include "CapteurTemperature.hpp"
 #include "LCD.hpp"
-#include "Led.hpp"
-#include "CapteurTactile.hpp"
-#include "Buzzer.hpp"
 #include "BoutonPoussoir.hpp"
 #include "Arrosage.hpp"
 
 class Jardin {
 private:
     // Capteurs et actionneurs
-    CapteurTemperature temp;
-    LCD lcd;
-    Led led;
-    CapteurTactile ct;
-    Buzzer buzz;
+    CapteurTemperature temp;  // Lit les valeurs de temperature et humidité 
+    LCD lcd;                 // Affiche les différents écrans souhaités (température+ humidité et caractéristiques des plantes)
+    Led led;                // led allumée = mode auto / led eteinte = mode manuel 
+    CapteurTactile ct;     // capteur tactile qui actionne la led selon le mode d'arrosage souhaité 
+    Buzzer buzz;          //buzzer qui simule le temps d'arrosage de chaque plante 
     BoutonPoussoir bp;   // bouton pour navigation menu 
 
-    // Plantes
-    std::vector<Plante*> plantes;
+    // Plantes du jardin
+    std::vector<Plante*> plantes; 
 
-    // Arrosage
+    // Arrosage 
     Arrosage arroser;
 
-    // Timers
+    // Timers pour mettre à jour les points de vie des plantes 
     unsigned long derniereMiseAJourPlantes;
     const unsigned long intervalMiseAJourPlantes = 30000; // 30s
 
 public:
+
+    //Constructeur 
     Jardin();
 
+    //Initialisation du jardin 
     void init();
+
+    //Programme
     void run();
 
     // Ajouter une plante au jardin
-    void AjouterPlante(Plante* plante) {
-        plantes.push_back(plante);
-        arroser.AjouterPlante(plante);
-    }
+    void AjouterPlante(Plante* plante);
 };
 
 #endif

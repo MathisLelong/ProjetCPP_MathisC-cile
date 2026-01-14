@@ -5,16 +5,16 @@ Jardin::Jardin()
       ct(BROCHE_CT),
       buzz(BROCHE_BUZZER),
       bp(BROCHE_BP1),
-      arroser(led, ct, buzz, temp),
+      arroser(led, ct, buzz, temp, plantes),
       derniereMiseAJourPlantes(0)
 {
     // Création des plantes de base
     Rose* rose1 = new Rose("rouge");
     Tulipe* tulipe1 = new Tulipe("bleue");
     Rose* rose2 = new Rose("blanche");
-    Poireau* poireau1 = new Poireau(15, "Bernard");
-    Citrouille* citrouille = new Citrouille(20,"Marie");
-    Poireau* poireau2 = new Poireau(10, "Michelle");
+    Poireau* poireau1 = new Poireau(15, "Marc");
+    Citrouille* citrouille = new Citrouille(20,"Pascale");
+    Poireau* poireau2 = new Poireau(10, "Francine");
     Poireau* poireau3 = new Poireau(*poireau1 + *poireau2);
 
     // Ajouter plantes au jardin
@@ -52,3 +52,7 @@ void Jardin::run() {
     lcd.GererMenuLCD(bp, temp, plantes);
 
 }
+
+  void Jardin::AjouterPlante(Plante* plante) {
+        plantes.push_back(plante);
+    }

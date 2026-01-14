@@ -5,15 +5,12 @@
 
 class Legume: public Plante{
 
-protected:
-
-
-
 public:
 
+  //Constructeur
   Legume();
-  //virtual void Caracteristiques();
 
+  //Destructeur
   virtual ~Legume();
 
 

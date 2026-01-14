@@ -21,7 +21,7 @@ class Arrosage {
   Buzzer& buzz;
   CapteurTemperature& Temp;
   //vecteur de plantes
-  std::vector<Plante*> plantes; 
+  std::vector<Plante*>& plantes; 
   
   bool ModeAuto; //mode arrosage automatique
   bool DernierEtat; //dernier mode d'arrosage 
@@ -33,16 +33,13 @@ class Arrosage {
   public : 
  
  //Constructeur
-  Arrosage(Led& l, CapteurTactile& c, Buzzer& b, CapteurTemperature& T);
+  Arrosage(Led& l, CapteurTactile& c, Buzzer& b, CapteurTemperature& T,std::vector<Plante*>& p);
 
 // fonction qui arrose une plante selon sa durée d'arrosage 
   void ArroserPlante();
 
 // fonction qui passe du mode d'arrosage automatique au mode d'arrosage manuel 
   void ChangerModeArrosage();  
-
-//fonction qui ajoute une plante au jardin 
-  void AjouterPlante(Plante* plante);
     
   //Destructeur
   ~Arrosage(); 

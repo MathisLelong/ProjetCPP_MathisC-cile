@@ -1,6 +1,7 @@
 #include "Arrosage.hpp" 
 
-Arrosage::Arrosage(Led& l, CapteurTactile& c, Buzzer& b, CapteurTemperature& T): led(l), CT(c), buzz(b), Temp(T), planteIndex(0), enCours(false), ModeAuto(false){
+Arrosage::Arrosage(Led& l, CapteurTactile& c, Buzzer& b, CapteurTemperature& T,std::vector<Plante*>& p): led(l), CT(c), buzz(b), Temp(T),plantes(p), planteIndex(0), enCours(false), ModeAuto(false){
+    DernierEtat=CT.LireEtat();
 }
 
 void Arrosage::ArroserPlante() {
@@ -24,7 +25,7 @@ void Arrosage::ArroserPlante() {
             return;
         }
 
-        // trouver la prochaine plante qui nécessite arrosage
+        // trouver la prochaine plante qui nécessite arrosage si elle n'est pas morte 
         while (planteIndex < plantes.size() &&
                (!Temp.NecessiteArrosage(plantes[planteIndex]->GetSeuilArrosage()) || plantes[planteIndex]->GetPointDeVie()==0)) {
             planteIndex++;
@@ -64,6 +65,7 @@ void Arrosage::ArroserPlante() {
      else if (!ModeAuto && enCours==true){
         buzz.Desactiver(); 
         led.Desactiver(); 
+        enCours=false; 
      }
      else{
       led.Activer();}
@@ -74,8 +76,5 @@ void Arrosage::ArroserPlante() {
 
   }
 
-  void Arrosage::AjouterPlante(Plante* plante) {
-    plantes.push_back(plante);
-}
     
  Arrosage::~Arrosage(){}
