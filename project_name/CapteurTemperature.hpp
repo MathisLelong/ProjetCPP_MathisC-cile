@@ -3,7 +3,6 @@
 #ifndef _CapteurTemperature_hpp
 #define _CapteurTemperature_hpp
 #include <Arduino.h>
-#include <string.h>
 #include <Wire.h>
 #include <Adafruit_SHT31.h>
 #include "Capteur.hpp"

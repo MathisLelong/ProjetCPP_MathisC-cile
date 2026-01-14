@@ -6,8 +6,6 @@
 #include "Peripherique.hpp"
 
 
-using namespace std;
-
 class Capteur : public Peripherique {
 
   protected :

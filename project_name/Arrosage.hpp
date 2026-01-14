@@ -4,7 +4,6 @@
 #define _Arrosage_hpp
 
 #include <Arduino.h>
-#include <string.h>
 #include "CapteurTactile.hpp"
 #include "Led.hpp"
 #include "Buzzer.hpp"

@@ -1,5 +1,8 @@
-#pragma once
+#ifndef JARDIN_HPP
+#define JARDIN_HPP
+
 #include <vector>
+#include <Arduino.h>
 #include "Plante.hpp"
 #include "Rose.hpp"
 #include "Tulipe.hpp"
@@ -21,8 +24,7 @@ private:
     Led led;
     CapteurTactile ct;
     Buzzer buzz;
-    BoutonPoussoir bp;   // bouton pour navigation LCD
-    BoutonPoussoir bpDemo; // bouton pour ajouter une plante pendant la démo
+    BoutonPoussoir bp;   // bouton pour navigation menu 
 
     // Plantes
     std::vector<Plante*> plantes;
@@ -46,3 +48,5 @@ public:
         arroser.AjouterPlante(plante);
     }
 };
+
+#endif

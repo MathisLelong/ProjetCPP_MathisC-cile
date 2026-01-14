@@ -4,9 +4,6 @@
 #define _Tulipe_hpp
 
 #include "fleurs.hpp"
-#include <string.h>
-
-
 
 class Tulipe: public Fleurs{
 

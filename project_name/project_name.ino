@@ -1,6 +1,4 @@
 #include "Application.h"
-#include "LCD.hpp"
-
 
 Application myApplication;
 

@@ -1,12 +1,10 @@
 #include "Jardin.hpp"
-#include <Arduino.h>
 
 Jardin::Jardin()
     : led(BROCHE_LED),
       ct(BROCHE_CT),
       buzz(BROCHE_BUZZER),
       bp(BROCHE_BP1),
-      bpDemo(BROCHE_BP2), // broche libre pour le bouton de démo
       arroser(led, ct, buzz, temp),
       derniereMiseAJourPlantes(0)
 {
@@ -52,16 +50,5 @@ void Jardin::run() {
 
     // LCD
     lcd.GererMenuLCD(bp, temp, plantes);
-
-    // --- Démo : ajout ponctuel d'une plante ---
-// Commenter ou supprimer si pas de bouton
-// static bool planteAjoutee = false;
-// if (!planteAjoutee && bpDemo.AppuiDetecte()) {
-//     Rose* roseDemo = new Rose("jaune");
-//     roseDemo->SetSeuilHumidite(50, 65);
-//     AjouterPlante(roseDemo);
-//     planteAjoutee = true;
-//     Serial.println("Nouvelle plante ajoutée pour la démo !");
-// }
 
 }

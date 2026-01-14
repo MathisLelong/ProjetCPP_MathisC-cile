@@ -3,9 +3,6 @@
 
 # include "legume.hpp"
 
-
-using namespace std ;
-
 class Citrouille: public Legume{
 
 protected:

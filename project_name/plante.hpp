@@ -4,7 +4,6 @@
 #define _plante_hpp
 
 #include <Arduino.h>
-#include <string>
 #include "CapteurTemperature.hpp"
 
 

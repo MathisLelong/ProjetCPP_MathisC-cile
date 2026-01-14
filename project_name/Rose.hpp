@@ -4,9 +4,6 @@
 #define _Rose_hpp
 
 #include "fleurs.hpp"
-#include <string.h>
-
-
 
 class Rose: public Fleurs{
 

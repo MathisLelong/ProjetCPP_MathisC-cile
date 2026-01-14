@@ -4,9 +4,6 @@
 #define _fleurs_hpp
 
 #include "plante.hpp"
-#include <string.h>
-
-
 
 class Fleurs: public Plante{
 

@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include <string.h>
 #include "citrouille.hpp"
 
 

@@ -3,7 +3,6 @@
 #ifndef _CapteurTactile_hpp
 #define _CapteurTactile_hpp
 #include <Arduino.h>
-#include <string.h>
 #include "Capteur.hpp"
 
 #define BROCHE_CT D7

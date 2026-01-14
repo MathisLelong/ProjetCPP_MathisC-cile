@@ -1,4 +1,3 @@
-#include <string.h>
 #include "Capteur.hpp"
 
 Capteur::Capteur(): Peripherique(){} 
