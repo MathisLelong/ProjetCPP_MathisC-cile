@@ -20,7 +20,7 @@ int Tulipe::GetDureeArrosage(){
 }
 
 float Tulipe::GetSeuilArrosage(){
-    return 70.0; 
+    return 60.0; 
 }
 
 Tulipe::~Tulipe(){

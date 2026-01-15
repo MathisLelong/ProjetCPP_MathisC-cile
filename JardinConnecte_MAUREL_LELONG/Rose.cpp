@@ -16,7 +16,7 @@ int Rose::GetDureeArrosage(){
 }
 
 float Rose:: GetSeuilArrosage(){
-    return 70.0; 
+    return 60.0; 
 }
 
 

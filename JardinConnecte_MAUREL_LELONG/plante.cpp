@@ -28,7 +28,7 @@ void Plante::ModifPointDeVie(CapteurTemperature &capteurhum) {
         if (point_de_vie < 0) {
           point_de_vie = 0;
           }}
-    else if (capteurhum.LireValeurhum() > seuil+15){
+    else if (capteurhum.LireValeurhum() > seuil+5){
         point_de_vie += 1;
          if (point_de_vie > 10) {
           point_de_vie = 10;
