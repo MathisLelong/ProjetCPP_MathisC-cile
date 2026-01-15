@@ -3,6 +3,9 @@
 
 # include "legume.hpp"
 
+
+# define ProbCitrouille 1
+
 class Citrouille: public Legume{
 
 protected:

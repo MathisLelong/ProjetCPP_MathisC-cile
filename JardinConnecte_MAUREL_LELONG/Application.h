@@ -13,7 +13,7 @@
 class Application
 {
   protected : 
-  Jardin monJardin;
+  Jardin *monJardin=nullptr;
   public :
     /**
      * @fn Application();

@@ -5,8 +5,8 @@
 
 #include "Rose.hpp"
 #include "Tulipe.hpp"
-#include "Poireau.hpp"
-#include "Citrouille.hpp"
+#include "poireau.hpp"
+#include "citrouille.hpp"
 #include "LCD.hpp"
 #include "BoutonPoussoir.hpp"
 #include "Arrosage.hpp"

@@ -4,6 +4,10 @@
 
 Citrouille::Citrouille(int d,String n):Legume(){
 
+  if (d>200){
+    throw (int)ProbCitrouille;
+  }
+
   diametre=d;
   nom=n;
 

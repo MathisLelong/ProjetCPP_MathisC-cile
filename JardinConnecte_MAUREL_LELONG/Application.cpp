@@ -22,13 +22,13 @@ void Application::init(void)
 {
   // Code
   Serial.begin(9600);
-  
-  monJardin.init();
+  monJardin = new Jardin();
+  monJardin->init();
 }
 
 
 void Application::run(void)
 {
-monJardin.run();
+monJardin->run();
     
 }

@@ -8,13 +8,15 @@ Jardin::Jardin()
       arroser(led, ct, buzz, temp, plantes),
       derniereMiseAJourPlantes(0)
 {
+     try{
     // Création des plantes de base
     Rose* rose1 = new Rose("rouge");
     Tulipe* tulipe1 = new Tulipe("bleue");
     Rose* rose2 = new Rose("blanche");
-    Poireau* poireau1 = new Poireau(15, "Marc");
+    Poireau* poireau1 = new Poireau(15, "Berthe");
+    
     Citrouille* citrouille = new Citrouille(20,"Pascale");
-    Poireau* poireau2 = new Poireau(10, "Francine");
+    Poireau* poireau2 = new Poireau(10, "Denys");
     Poireau* poireau3 = new Poireau(*poireau1 + *poireau2);
 
     // Ajouter plantes au jardin
@@ -24,11 +26,20 @@ Jardin::Jardin()
     AjouterPlante(poireau1);
     AjouterPlante(citrouille);
     AjouterPlante(poireau2);
-    AjouterPlante(poireau3);
+    AjouterPlante(poireau3); 
+    
+    Citrouille* citrouille2 = new Citrouille(201,"Ginette");
+    AjouterPlante(citrouille2);
+    }
+
+    catch (int a){
+        if (a==ProbCitrouille){
+            Serial.println("Le jardin s'est fait écrasé par une citrouille !!! Oh non");
+        }
+    }
 }
 
 void Jardin::init() {
-    Serial.begin(9600);
     lcd.Init();
     temp.Init();
 }
